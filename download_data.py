@@ -10,12 +10,18 @@ from pathlib import Path
 
 import requests
 
-ROUTES = []  # ex. ["Pyrenees", "Av_de_Clichy", "Voie_Mazas"]
+# Liste des 3 axes selectionnes
+ROUTES = [
+    "Bd_Grenelle",
+    "Av_Foch",
+    "Bd_Barbes"
+] 
 DATE_DEBUT = "2026-03-01"
 DATE_FIN = "2026-09-01"  # exclue
 
 URL = ("https://opendata.paris.fr/api/explore/v2.1/catalog/datasets/"
        "comptages-routiers-permanents/exports/csv")
+# Colonnes utiles a conserver pour l'analyse
 COLONNES = ("iu_ac,libelle,t_1h,q,k,etat_trafic,iu_nd_amont,libelle_nd_amont,"
             "iu_nd_aval,libelle_nd_aval,etat_barre")
 SORTIE = Path("data/raw/comptages.csv")
@@ -31,8 +37,10 @@ def main():
     }
     SORTIE.parent.mkdir(parents=True, exist_ok=True)
     print("Téléchargement en cours (1 à 3 minutes)...")
+    # Telechargement par flux pour economiser la RAM
     with requests.get(URL, params=params, stream=True, timeout=600) as r:
         r.raise_for_status()
+        # Ecriture du fichier par blocs de 1 Mo sur le disque
         with open(SORTIE, "wb") as f:
             for chunk in r.iter_content(1 << 20):
                 f.write(chunk)
