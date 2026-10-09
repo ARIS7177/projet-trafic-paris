@@ -14,13 +14,13 @@ Quels sont les niveaux de saturation et la dynamique de circulation sur trois ax
 ## Résultats
 - Le Boulevard Grenelle conserve un trafic majoritairement fluide avec une capacité limitée plafonnant sous les 400 véhicules/heure et un taux d'occupation restant quasi systématiquement inférieur à 40 %.
 - Le Boulevard Barbès subit les congestions les plus sévères, enregistrant des taux d'occupation prolongés atteignant 45 % à plus de 70 %, bien que son débit maximal plafonne à 550 véhicules/heure.
-![alt text](image-4.png)
-![alt text](image-5.png)
 
+![alt text](graphiques/image-4.png)
+![alt text](graphiques/image-5.png)
 
 ## Limites
 - L'étude repose sur des boucles magnétiques spécifiques ; les résultats traduisent le trafic au niveau du point de comptage et non sur l'intégralité du linéaire de la voie.
-- L'absence de données sur la météo, les chantiers temporaires, la régulation des feux tricolores ou les événements exceptionnels limite l'explication sur la cause de certains pics isolés.
+- L'absence de données sur la météo, les chantiers temporaires, la régulation des feux tricolores ou les événements exceptionnels limite l'explication sur la cause de certains pics isolés. 
 
 
 ## Lancer le projet
