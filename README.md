@@ -44,7 +44,8 @@ Usages:
 - Structuration et harmonisation esthétique des graphiques Seaborn/Matplotlib
 - Résolution des erreurs d'environnement virtuel, 
 - Validation métier des règles de filtrage physique du trafic routier (rejet de l'IQR)
-  Modifications apportées : 
+  
+Modifications apportées : 
 - Ajustement systématique des suggestions aux spécificités du projet 
 - Vérification manuelle des seuils d'aberration
 - Rédaction des synthèses analytiques adaptées au contexte parisien
